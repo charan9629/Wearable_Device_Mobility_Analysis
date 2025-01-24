@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sustainable Living</title>
+    <style>
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Wearable device for Mobility Analysis</h1>
+    <p id="intro">Enhancing Smart Footwear with MEMS-Based Pressure Sensors and IMU Technology </p>
+    <h2 id="subheading">Motivation</h2>
+	<p id="main_point1">• Some patients often suffer mobility challenges and athletes strive for peak performance.</p>
+    <p id="main_point2">• Our aim is to design wearable footwear to track performance metrics and detect health anomalies for athletes and patients.</p>
+	<p id="main_point3">• MEMS based Pressure sensor and Inertial Measurement Unit is used to monitor the required data and assist in gait analysis.</p>
+	<p id="main_point4">• The product can provide actionable insights to optimize training, aid in medical recovery and enhanced comfort for users.</p>
+    <p id="conclusion"> Conclusion </p>
+    <audio controls id="audio">
+        <source src="blog_audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const timings = [
+		    { id: 'heading', time: 1 },
+            { id: 'intro', time: 2 },
+			{ id: 'subheading', time: 1 },
+            { id: 'main_point1', time: 3 },
+            { id: 'main_point2', time: 3 },
+			{ id: 'main_point3', time: 3 },
+			{ id: 'main_point4', time: 3 },
+            { id: 'conclusion', time: 0 }
+        ];
+        const audio = document.getElementById('audio');
+        audio.addEventListener('timeupdate', () => {
+            timings.forEach(({ id, time }) => {
+                document.getElementById(id).classList.toggle(
+                    'highlight',
+                    audio.currentTime >= time && audio.currentTime < time + 5
+                );
+            });
+        });
+    </script>
+</body>
+</html>
