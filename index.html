@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearable Device for Mobility Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .logo-container img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .center-logo {
+            max-width: 200px; /* Make the center logo a bit larger */
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+			color: red;
+        }
+
+        /* Center all images */
+        .image-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .image-container img {
+            max-width: 60%;
+            height: auto;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="ublogo.png" alt="University of Bremen Logo" class="left-logo">
+       <! –– <img src="mcblogo.png" alt="IMSAS Logo" class="center-logo">
+        <img src="imsaslogo.png" alt="MCB Logo" class="right-logo">
+    </div>
+
+    <h1 id="heading">Wearable Device for Mobility Analysis</h1>
+    <p id="intro">Improving Smart Footwear with MEMS-Based Pressure Sensors and IMU Technology</p>
+	
+	<h2 id="subheading_1">Motivation</h2>
+    <p id="main_m_point1"> Many patients face mobility issues, while athletes aim for optimal performance.Our goal is to create wearable footwear that monitors performance metrics and identifies health irregularities for both athletes and patients. A MEMS-based pressure sensor and Inertial Measurement Unit are utilized to gather the necessary data and support gait analysis.[2] The product can deliver actionable insights to enhance training, facilitate medical recovery, and improve user comfort. In addition to that, we can collect data for athletes on metrics like speed, distance,cadence, stride length, and impact force. This helps athletes monitor their progress and adjust their training for better results.Our product is not a footwear but a Sole where people can keep in their shoes based on the design and comfort.Enhanced Comfort: Designed for long-term wear, prioritizing comfort and usability.</p>
+
+   <div class="image-container">
+        <img src="3.png" alt="Gait Analysis">
+    </div>
+	   <div class="image-container">
+        <img src="4.png" alt="Gait Analysis">
+    </div>
+ 
+ 
+	<h2 id="subheading_2">Design & Working Principle </h2>
+	<p id="main_w_point1"> The working principle of smart shoes relies on integrating sensors, microcontrollers, and connectivity modules to monitor and analyse motion, posture, and other user-specific data. The In-soles of the shoes has a sensor-based data acquisition unit which is used for real-time tracking and feedback mechanisms. The sensors embedded in the in-soles of the shoes collect data about the user’s activity and environment. Three pressure sensors are placed in the front portion of the foot and one is placed at the heal side. This will help to detect pressure distribution across the in-sole. Micro-controller and the battery are placed at the center of the in-sole which is a suitable position for placement of these devices as there is a foot arc at this place. IMU’s are placed on the right and lefthand side of them. They combine accelerometer, gyroscope, and magnetometer in a single unit for comprehensive motion tracking. It can provide 6 or 9-Degress of Freedom data for detailed gait and activity monitoring. 6-DOF (Six Degrees of Freedom) refers to the ability to measure or control motion in six independent ways, which include measuring three translational movements (Forward/Backward, left/right, up/down) using accelerometer and measuring three rotational movements (rotation around x, y and z axis) using gyroscope. The collected raw data from sensors is processed using an onboard microcontroller and it is transferred to the mobile application using a wireless data transfer process which is Bluetooth based. Based on the processed data, the system generates real-time feedback and performance metrics can be viewed in the mobile application. This can provide the data on number of footsteps, total distance covered, gait analytics like difference in the walking type, jogging type or running type. Thus, we can get actionable feedback for posture correction and performance improvement. Complete system will be powered up only on the application of the pressure i.e.; when the person wears the shoe and he starts walking. Charging need to be done periodically based on the utilization.</p>
+ 
+   <div class="image-container">
+        <img src="1.png" alt="Design">
+    </div>
+
+	<h2 id="subheading_3">Fabrication of Pressure Sensor</h2>
+	<p id="main_PS_point1">STEP 1: We have a base wafer made of silicon or any other semiconductor material. A cavity is created in it to define the pressure-sensing diaphragm.</p>
+	<p id="main_PS_point2">STEP 2: A photoresist material is applied as a sacrificial layer over the wafer to define the sensing structure.</p>
+	<p id="main_PS_point3">STEP 3: This layer is patterned using photolithography. The areas where the sensor diaphragm and connections will form are defined.</p>
+	<p id="main_PS_point4">STEP 4: The wafer is diced into individual sensor chips using a saw. This creates the basic unit for each pressure sensor.</p>
+	<p id="main_PS_point5">STEP 5: The pressure sensor chip is mounted on a substrate. Electrical connections are made using wire bonding to connect the sensor to external circuits.</p>
+	<p id="main_PS_point6">STEP 6: The sensor is encapsulated using transfer molding to provide mechanical protection.</p>
+	<p id="main_PS_point7">STEP 7: The sacrificial photoresist layer is removed to expose the functional parts of the sensor. Now the diaphragm can move under pressure.</p>
+	<p id="main_PS_point8">STEP 8: The edges are cut for proper fitting and the sensor is packed properly.</p>
+
+   <div class="image-container">
+        <img src="2.png" alt="Pressure Sensor Fabrication">
+    </div>
+    
+	<h2 id="subheading_4">Fabrication of IMU</h2>
+	<p id="main_IMU_point1">STEP 1: A layer of polyimide is deposited on the silicon wafer surface to act as an insulating or structural layer.[1]</p>
+	<p id="main_IMU_point2">STEP 2: A thin layer of metal like gold or aluminium is deposited on top of the polyimide. The metal layer is patterned using photolithography to form electrical connections.</p>
+	<p id="main_IMU_point3">STEP 3: Individual sensors like accelerometers, gyroscopes are integrated onto the wafer at designated positions and are bonded using methods like wire-bonding.</p>
+	<p id="main_IMU_point4">STEP 4: A secondary wafer called handle wafer is bonded to the SOI wafer for mechanical support. A photoresist layer is used as a sacrificial material to define cavities or free-moving structures.</p>
+	<p id="main_IMU_point5">STEP 5: Selective etching is performed to remove the photoresist and create the final sensor geometry. A protective lid is added on top of the IMU to shield it from external damage. Metal and epoxy are used to seal the lid and ensure durability. The IMU is then diced and packaged for different applications.</p>
+
+   <div class="image-container">
+        <img src="5.png" alt="IMU Sensor Fabrication">
+    </div>
+	
+	<h2 id="subheading_5">Technical Specification</h2>
+	<p id="main_TS_point1">• A Pressure sensor within a range of 0-100 KPa and sensitivity of ±0.1 kPa to measure pressure distribution across the foot is considered.</p>
+	<p id="main_TS_point2">• Inertial Measurement Unit placed at the centre consists of accelerometer, gyroscope and magnetometer.</p>
+	<p id="main_TS_point3">• Accelerometer of the IMU has an acceleration range of ±16 g to ±32 g to capture both normal walking/running and high-impact activities.</p>	
+	<p id="main_TS_point4">• Gyroscope has a range of ±250 to ±2000 degrees/second suitable for tracking quick and precise rotational movements.</p>	
+	<p id="main_TS_point5">• Magnetometer has a range of ±8 to ±16 gauss for orientation and heading detection.</p>	
+	<p id="main_TS_point6">• Microcontroller considered for the application is ESP32 based microcontroller integrated with Bluetooth 4.2, 34 pin GPIO and ADC of 12-bit resolution.</p>	
+	<p id="main_TS_point7">• Lightweight rechargeable battery acts as a power source and has a capacity of 5000mAh as it approximately consumes power of 2520mAh per day.</p>	
+	<p id="main_TS_point8">• A mobile app is integrated to the system for real-time data visualization and feedback will be provided which will display the data consisting of Gait analysis. Also, anomalies are detected using the same.</p>	
+
+    <h2 id="subheading_6">Cost Estimation</h2>
+	<p id="main_C_point1"> Pressure sensor and IMU will cost around 80€. Electronics including Microcontroller and battery costs around 10€. Customized insoles for shoes cost around 90 to 120 €. Mobile application can cost around 10€. The rough estimate could range from 130€ to €150 per shoe. Shoe may cost around 30€ and above depending on the quality. </p>
+
+    <h2 id="subheading_7">Summary</h2>
+	<p id="main_S_point1"> The proposed solution is intended to aid mobility rehabilitation and performance optimization for people. The in-sole of the shoe can be designed in a way that it is compatible for common people, patients and athletes. For a paralysis patient, improvements in their physical condition can be analysed by the collected data. The smart design of the shoes provides enhanced injury prevention for athletes and patients whereas, it enhances the comfort for a common man.</p>
+
+    <h2 id="subheading_7">References</h2>
+	<p id="main_R_point1">[1]https://www.researchgate.net/figure/Fabrication-process-forfolded-IMU-structures-The-process-includes-fabricationof_fig5_228454752</p>
+	<p id="main_R_point2">[2]https://contemplas.com/en/biomechanics-in-focus-understandingvideo-based-2d-gait-analysis/</p>
+
+    <h2 id="subheading_7">Thank You</h2>
+	
+	<audio controls id="audio">
+        <source src="blog_audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const timings = [
+	    { id: 'heading', time:  },
+            { id: 'intro', time:  },
+	    { id: 'subheading', time:  },
+            { id: 'main_point1', time:  },
+            { id: 'main_point2', time:  },
+	    { id: 'main_point3', time:  },
+	    { id: 'main_point4', time:  },
+            { id: 'conclusion', time:  }
+        ];
+        const audio = document.getElementById('audio');
+        audio.addEventListener('timeupdate', () => {
+            timings.forEach(({ id, time }) => {
+                document.getElementById(id).classList.toggle(
+                    'highlight',
+                    audio.currentTime >= time && audio.currentTime < time + 5
+                );
+            });
+        });
+    </script>
+</body>
+</html>
